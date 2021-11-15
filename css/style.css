@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+/* font-family: 'Red Hat Display', sans-serif; */
+
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    height: 100vh;
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container .box .img-box img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.container .box {
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+    width: 370px;
+}
+.container .box .text-box .title{
+    font-size: 23px;
+    font-weight: 900;
+    color: var(--Dark-blue);
+}
+.container .box .text-box {
+    padding: 0 40px;
+}
+.container .box .text-box .paragraph {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--Desaturated-blue);
+    width: 100%;
+    margin-bottom: 25px;
+}
+.container .box .text-box .price-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Very-pale-blue);
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(100% - 20px);
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+.container .box .text-box .price-area .icon-price {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-right: 38px;
+}
+.container .box .text-box .price-area .icon-price .title-price{
+    margin-left: 20px;
+
+}
+.container .box .text-box .price-area .icon-price .title-price p {
+    color: var(--Dark-blue);
+    font-weight: 900;
+    margin: auto;
+    padding-bottom: 5px;
+}
+.container .box .text-box .price-area .icon-price .title-price span {
+    color: var(--Desaturated-blue);
+    font-weight: 700;
+}
+.container .box .text-box .price-area .btn-chng a{
+    color: var(--Bright-blue);
+    font-weight: 900;
+    transition: .3s;
+    transition-property: opacity, text-decoration;
+}
+
+.container .box .text-box .payment-btn {
+    width: calc(100% + 40px);
+    outline: none;
+    border: none;
+    background-color: var(--Bright-blue);
+    color: var(--Pale-blue);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 3px 15px -4px var(--Bright-blue);
+    display: block;
+    text-decoration: none;
+    transition: .3s;
+    transition-property: opacity;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+.container .box .text-box .payment-btn:hover,
+.container .box .text-box .price-area .btn-chng:hover a {
+    opacity: 0.7;
+    text-decoration: none;
+}
+.container .box .text-box .cancel-btn {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--Desaturated-blue);
+    margin: 30px 0;
+    text-decoration: none;
+    display: block;
+    transition: .3s;
+    transition-property: color;
+}
+.container .box .text-box .cancel-btn:hover {
+    color: var(--Dark-blue);
+}
+@media screen and (max-width: 375px) {
+    .container {
+        background-image: url(../images/pattern-background-mobile.svg) !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+    .container .box {
+        width: 90%;
+        
+    }
+    .container .box .text-box .price-area {
+        margin: 0 auto;
+        position: relative;
+        padding: 10px;
+        width: calc(100% + 40px);
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+    .container .box .text-box .price-area .icon-price {
+        font-size: 14px;
+        margin-right: 0;
+    }
+    .container .box .text-box .price-area .btn-chng a {
+        font-size: 14px;
+    }
+}
